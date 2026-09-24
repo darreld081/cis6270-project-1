@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(///wsl.localhost/ubuntu/home/darre/**)",
+      "Bash(python3 -c \"import torch, pytorch_lightning, lightning, sklearn, scipy, pandas, numpy; print\\('torch', torch.__version__\\); print\\('pl', pytorch_lightning.__version__\\); print\\('lightning', lightning.__version__\\)\")",
+      "Bash(/c/Python314/python -c \"import torch\")",
+      "Bash(/c/Users/darre/AppData/Local/Programs/Python/Python39/python.exe -c \"import torch, pytorch_lightning, lightning; print\\('ok'\\)\")",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(/c/Python314/python -m py_compile train_flow_matching.py dataloaders/trametinib_loader.py)",
+      "Bash(/c/Python314/python -m py_compile train_flow_matching.py)",
+      "Bash(/c/Python314/python _build_notebook.py)",
+      "Bash(/c/Python314/python -c \"import json,pathlib; nb=json.loads\\(pathlib.Path\\('train_flow_matching.ipynb'\\).read_text\\(\\)\\); print\\('cells:', len\\(nb['cells']\\)\\); print\\('nbformat ok'\\)\")"
+    ]
+  }
+}

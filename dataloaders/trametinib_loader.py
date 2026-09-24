@@ -3,7 +3,7 @@ import sys
 from sklearn.preprocessing import StandardScaler
 import pytorch_lightning as pl
 from torch.utils.data import DataLoader
-from lightning.pytorch.utilities.combined_loader import CombinedLoader
+from pytorch_lightning.utilities.combined_loader import CombinedLoader
 import pandas as pd
 import numpy as np
 from functools import partial
