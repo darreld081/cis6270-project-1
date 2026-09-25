@@ -133,6 +133,10 @@ class TrametinibSingleBranchDataModule(pl.LightningDataModule):
 
         self.coords_t0 = x0
         self.coords_t1 = x1
+        # Class label (0/1/2) aligned row-for-row with coords_t1, exposed for downstream
+        # analysis/visualization (e.g. verifying classifier-free guidance) beyond just
+        # the train/val dataloaders.
+        self.coords_t1_labels = torch.cat([x1_1_labels, x1_2_labels, x1_3_labels])
 
         self.time_labels = np.concatenate([
             np.zeros(len(self.coords_t0)),    # t=0
