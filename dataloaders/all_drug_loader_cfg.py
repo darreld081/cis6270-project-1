@@ -43,8 +43,8 @@ class TrametinibSingleBranchDataModule(pl.LightningDataModule):
         dmso_data = df[dmso_mask].copy()
         drug_data = df[drug_mask].copy()
         
-        # Class labels 0/1/2 below correspond to this order: '1.0', '2.0', '3.0'
-        drug_classes = ['1.0', '2.0', '3.0']
+        # Class labels 0/1/2 below correspond to this order: '2.0', '3.0', '4.0'
+        drug_classes = ['2.0', '3.0', '4.0']
         
         x1_1_data = drug_data[drug_data[drug_col].astype(str) == drug_classes[0]]
         x1_2_data = drug_data[drug_data[drug_col].astype(str) == drug_classes[1]]
